@@ -3,24 +3,8 @@
     <option name="visitedUrls">
       <list>
         <UrlAndUserName>
-          <option name="url" value="https://github.com/VelbazhdSoftwareLLC/tuty-fruty-slot-for-android.git" />
-          <option name="userName" value="" />
-        </UrlAndUserName>
-        <UrlAndUserName>
-          <option name="url" value="https://github.com/Danziger/slotjs.git" />
-          <option name="userName" value="" />
-        </UrlAndUserName>
-        <UrlAndUserName>
-          <option name="url" value="https://github.com/clintbellanger/Karma-Slots.git" />
-          <option name="userName" value="" />
-        </UrlAndUserName>
-        <UrlAndUserName>
-          <option name="url" value="https://github.com/Jfaler/Bitcoin-Slot-Machine" />
-          <option name="userName" value="" />
-        </UrlAndUserName>
-        <UrlAndUserName>
           <option name="url" value="git@github.com:/rayashnetmon/luckbewithyou.git" />
-          <option name="userName" value="" />
+          <option name="userName" value="rayashnetmon" />
         </UrlAndUserName>
       </list>
     </option>
