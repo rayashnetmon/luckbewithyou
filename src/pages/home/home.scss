@@ -1,0 +1,31 @@
+ion-card {
+        margin: 0 !important;
+        width: 100% !important;
+}
+
+
+
+#slotMachine_wrap{position: relative;display: block;width: 100%;height: 500px;}
+#slotMachine{position: absolute;width: 730px;height: 326px;background: #000 url(../images/frame.jpg);top: 0;left: 0;overflow: hidden;}
+
+#wheelwrap{position:relative; background: #ccc;
+      width: 260px;
+      height: 198px;
+      left: 31px;
+      top: 54px;
+}
+div.wheel{position: absolute;width: 175px;height:190px;overflow: hidden;top: 3px;}
+div.wheel img{position: absolute;top: -4px;left: 0px;     width: 84px;}
+#wheelOverlay{position: absolute;
+  top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+}
+#wheel1{left:0px;}
+#wheel2{left: 86px;}
+#wheel3{left: 172px;}
+#slotTrigger{display: block;position: absolute;width: 200px;overflow: hidden;bottom: 20px;left: 27px;cursor: default;}
+#slotTrigger.slotTriggerDown{background-position: 0px -17px;}
+#slotTrigger.slotTriggerDisabled{background-position: 0px -34px;display: none;}
+.slotSpinAnimation{display: none;}

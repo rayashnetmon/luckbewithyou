@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-navbar  color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content no-padding>
+
+
+<h4>Current Credits: <p id="slotCredits">10000</p></h4>
+<div id="slotMachine_wrap">
+  <div id="slotMachine">
+    <div id="wheelwrap">
+      <div id="wheel1" class="wheel">
+          <img src="./assets/images/wheel1.gif" alt="" />
+          <img src="./assets/images/ani.gif" alt="" class="slotSpinAnimation" />
+      </div>
+      <div id="wheel2" class="wheel">
+          <img src="./assets/images/wheel2.gif" alt="" />
+          <img src="./assets/images/ani.gif" alt="" class="slotSpinAnimation" />
+      </div>
+      <div id="wheel3" class="wheel">
+          <img src="./assets/images/wheel3.gif" alt="" />
+          <img src="./assets/images/ani.gif" alt="" class="slotSpinAnimation" />
+      </div>
+      <img src="./assets/images/over.png" alt="" id="wheelOverlay" />
+
+    </div>
+    <a href="#" id="slotTrigger" class="btn btn-primary">spin</a>
+  </div>
+</div>
+
+<ion-buttons end>
+      <button ion-button icon-only (click) ="onSearch()">
+       <ion-icon name="search"></ion-icon>
+     </button>
+</ion-buttons>
+
+
+  <ion-card>
+    <ion-slides loop="true" autoplay="3000" pager>
+      <ion-slide *ngFor="let number of [1,2,3,4]">
+        <img src="./assets/images/{{number}}.jpg" />
+      </ion-slide>
+
+    </ion-slides>
+  </ion-card>
+
+  <img style="margin-top: 10px;" src="./assets/images/banner2.jpg" />
+
+  <ion-grid>
+    <ion-row>
+      <ion-slides #productSlides>
+        <ion-slide *ngFor="let product of products">
+          <ion-card no-padding>
+            <img [src]="product.featured_src" />
+            <h1 padding center> {{ product.title }} </h1>
+            <p center padding [innerHTML]="product.short_description"></p>
+
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <ion-item *ngFor="let product of moreProducts" text-wrap (click)="openProductPage(product)">
+      <ion-thumbnail item-left>
+        <img [src]="product.featured_src" />
+      </ion-thumbnail>
+
+      <h2> {{ product.title }} </h2>
+
+      <p>
+        <span [innerHTML]="product.short_description.substr(0, 50) + '...'"></span>
+        <span [innerHTML]="product.price_html"></span>
+      </p>
+
+      <button ion-button icon clear item-right>
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="loadMoreProducts($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>
